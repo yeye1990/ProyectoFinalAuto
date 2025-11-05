@@ -1,0 +1,8 @@
+﻿[
+  {
+    "usuario": "standard_user",
+    "contrasena": "secret_sauce",
+    "assert_pass": "Products",
+    "assert_title_form_login": "Swag Labs"
+  }
+]
