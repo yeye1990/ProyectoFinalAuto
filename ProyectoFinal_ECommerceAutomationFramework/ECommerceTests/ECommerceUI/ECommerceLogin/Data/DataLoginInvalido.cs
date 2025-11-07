@@ -9,5 +9,6 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
 {
     internal class DataLoginInvalido
     {
+        //Implementación de DDT para login inválido
     }
 }
