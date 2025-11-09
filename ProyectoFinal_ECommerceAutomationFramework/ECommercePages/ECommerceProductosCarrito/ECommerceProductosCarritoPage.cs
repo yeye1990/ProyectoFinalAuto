@@ -38,9 +38,25 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommercePro
 
         public int GetCartCount()
         {
-            //return _productosCarritoActions.ContarProductosEnCarrito(_driver);
-            //return driver.FindElements(CartItems).Count;
-            return 0;
+            // Wait for cart items to exist
+            _productosCarritoWaits.UsarElementExists(_productosCarritoComponents.GetByCartProducts());
+
+            // Count items found
+            var cartItemsCount = _driver.FindElements(_productosCarritoComponents.GetByCartProducts()).Count;
+
+            return cartItemsCount;
+        }
+
+        public void RemoveProductsFromCart()
+        {
+            var items = _driver.FindElements(_productosCarritoComponents.GetByCartProducts());
+            if (items.Count == 0)
+                throw new Exception("El carrito está vacío");
+
+            var firstItem = items[0];
+            var btn = firstItem.FindElement(_productosCarritoComponents.GetByRemoveButtons());
+            btn.Click();
+
         }
 
 
