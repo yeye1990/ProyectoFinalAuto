@@ -31,6 +31,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
+    <PackageReference Include="Reqnroll" Version="3.2.1" />
+    <PackageReference Include="Reqnroll.NUnit" Version="3.2.1" />
+    <PackageReference Include="Reqnroll.SpecFlowCompatibility" Version="3.2.1" />
     <PackageReference Include="Selenium.WebDriver" Version="4.38.0" />
     <PackageReference Include="SeleniumExtras.WaitHelpers" Version="1.0.2" />
   </ItemGroup>
@@ -45,6 +48,12 @@
     <Folder Include="ECommerceTests\ECommerceUI\ECommerceLogin\Screenshot\LoginValido\" />
     <Folder Include="ECommerceTests\ECommerceUI\ECommerceLogin\Screenshot\LoginInvalido\" />
     <Folder Include="ECommerceTests\ECommerceUI\ECommerceProductosCarrito\Screenshot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ECommerceTests\ECommerceUI\ECommerceLogin\Data\LoginInvalido\LoginInvalidoData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

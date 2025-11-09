@@ -76,6 +76,18 @@
               "target": "Package",
               "version": "[13.0.4, )"
             },
+            "Reqnroll": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Reqnroll.NUnit": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Reqnroll.SpecFlowCompatibility": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.38.0, )"

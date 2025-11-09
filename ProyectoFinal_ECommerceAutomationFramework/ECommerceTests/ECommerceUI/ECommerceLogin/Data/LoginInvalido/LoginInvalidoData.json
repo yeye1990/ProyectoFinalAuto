@@ -1,1 +1,7 @@
-﻿
+﻿[
+  {
+    "usuario": "standard_use",
+    "contrasena": "ecret_sauce",
+    "msjerror": "Epic sadface: Username and password do not match any user in this service"
+  }
+]

@@ -1,13 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "YC4AWZDjPAM=",
+  "dgSpecHash": "rfJ4IfPCiQM=",
   "success": true,
   "projectFilePath": "C:\\ProyectoFinalAutomatizacion\\ProyectoFinalAuto\\ProyectoFinal_ECommerceAutomationFramework\\ProyectoFinal_ECommerceAutomationFramework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\cucumber.cucumberexpressions\\17.1.0\\cucumber.cucumberexpressions.17.1.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\cucumber.htmlformatter\\21.15.1\\cucumber.htmlformatter.21.15.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\cucumber.messages\\29.0.1\\cucumber.messages.29.0.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\gherkin\\35.0.0\\gherkin.35.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.applicationinsights\\2.23.0\\microsoft.applicationinsights.2.23.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\9.0.6\\microsoft.bcl.asyncinterfaces.9.0.6.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.codecoverage\\18.0.0\\microsoft.codecoverage.18.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.2\\microsoft.extensions.dependencymodel.8.0.2.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.net.test.sdk\\18.0.0\\microsoft.net.test.sdk.18.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.testing.extensions.telemetry\\1.9.0\\microsoft.testing.extensions.telemetry.1.9.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.testing.extensions.trxreport.abstractions\\1.9.0\\microsoft.testing.extensions.trxreport.abstractions.1.9.0.nupkg.sha512",
@@ -22,12 +28,18 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\nunit\\4.4.0\\nunit.4.4.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\nunit.analyzers\\4.11.0\\nunit.analyzers.4.11.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\nunit3testadapter\\5.2.0\\nunit3testadapter.5.2.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\reqnroll\\3.2.1\\reqnroll.3.2.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\reqnroll.nunit\\3.2.1\\reqnroll.nunit.3.2.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\reqnroll.specflowcompatibility\\3.2.1\\reqnroll.specflowcompatibility.3.2.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\reqnroll.tools.msbuild.generation\\3.2.1\\reqnroll.tools.msbuild.generation.3.2.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\selenium.webdriver\\4.38.0\\selenium.webdriver.4.38.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\seleniumextras.waithelpers\\1.0.2\\seleniumextras.waithelpers.1.0.2.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection.metadata\\8.0.0\\system.reflection.metadata.8.0.0.nupkg.sha512"
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection.metadata\\8.0.0\\system.reflection.metadata.8.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.threading.channels\\9.0.6\\system.threading.channels.9.0.6.nupkg.sha512"
   ],
   "logs": []
 }

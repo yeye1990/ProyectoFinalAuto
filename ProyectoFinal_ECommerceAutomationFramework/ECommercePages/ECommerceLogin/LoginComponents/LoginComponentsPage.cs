@@ -50,5 +50,13 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLog
         private IWebElement Txt_Title_Producto => _driver.FindElement(_txtTitleProductos);
         public IWebElement GetWebElementTitleProducto() => Txt_Title_Producto;
 
+        // Definición de los localizadores By y WebElement 
+
+        private readonly By _txtMensajeErrorLogin = By.CssSelector("h3[data-test='error']");
+        public By GetByMensajeErrorLogin() => _txtMensajeErrorLogin;
+        private IWebElement Txt_Mensaje_Error_Login => _driver.FindElement(_txtMensajeErrorLogin);
+        public IWebElement GetWebElementMensajeErrorLogin() => Txt_Mensaje_Error_Login;
+
+
     }
 }

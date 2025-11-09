@@ -9,6 +9,28 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
 {
     internal class DataLoginInvalido
     {
-        //Implementación de DDT para login inválido
+        public string usuario { get; set; }
+        public string contrasena { get; set; }
+        public string msj_error { get; set; }
+
+        public static IEnumerable<TestCaseData> GetJsonDataLoginInvalido()
+        {
+            // Construye la ruta absoluta al archivo JSON
+            var filePath = Path.GetFullPath(
+                Path.Combine(
+                    TestContext.CurrentContext.TestDirectory,
+                    @"..", @"..", @"..",
+                    "ECommerceTests", "ECommerceUI", "ECommerceLogin", "Data", "LoginInvalido", "LoginInvalidoData.json"
+                )
+            );
+
+            // Usa la ruta construida dinámicamente
+            var data = JsonReaderBase.GetTestData<DataLoginInvalido>(filePath);
+
+            foreach (var item in data)
+            {
+                yield return new TestCaseData(item.usuario, item.contrasena, item.msj_error);
+            }
+        }
     }
 }
