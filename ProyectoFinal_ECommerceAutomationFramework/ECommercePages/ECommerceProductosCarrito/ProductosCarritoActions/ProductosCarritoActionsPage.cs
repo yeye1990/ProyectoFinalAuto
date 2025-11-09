@@ -16,5 +16,20 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommercePro
             _driver = driver;
             _action = new Actions(driver);
         }
+
+        public void UsarScrollToElement(IWebElement elemento)
+        {
+            _action.ScrollToElement(elemento).Perform();
+        }
+
+        public void UsarMoveToElement(IWebElement elemento)
+        {
+            _action.MoveToElement(elemento).Perform();
+        }
+
+        public void UsarDoubleClick(IWebElement elemento)
+        {
+            _action.DoubleClick(elemento).Perform();
+        }
     }
 }

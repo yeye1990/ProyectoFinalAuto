@@ -1,17 +1,10 @@
-﻿using NUnit.Framework.Interfaces;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin;
-using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin.LoginActions;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin.LoginComponents;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin.LoginWaits;
 using ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceLogin.Data;
 using Reqnroll;
-using Reqnroll.CommonModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceLogin.StepDefinitions
 {

@@ -23,5 +23,26 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommercePro
             _productosCarritoComponents = new ProductosCarritoComponentsPage(driver);
             _productosCarritoWaits = new ProductosCarritoWaitsPage(driver);
         }
+
+        public void HacerClicIconoCarrito()
+        {
+            _productosCarritoWaits.UsarElementToBeClickable(_productosCarritoComponents.GetByCartLink());
+            _productosCarritoComponents.GetWebElementCartLink().Click();
+        }
+
+        public void Assert_TituloConfirmacionCarritoPaginaWeb(string assert_title_cart)
+        {
+            _productosCarritoWaits.UsarElementExists(_productosCarritoComponents.GetByTitleCart());
+            Assert.That(_productosCarritoComponents.GetWebElementTitleCart().Text, Is.EqualTo(assert_title_cart));
+        }
+
+        public int GetCartCount()
+        {
+            //return _productosCarritoActions.ContarProductosEnCarrito(_driver);
+            //return driver.FindElements(CartItems).Count;
+            return 0;
+        }
+
+
     }
 }

@@ -9,12 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="EcommerceAPI\**" />
     <Compile Remove="ECommerceBDD\**" />
     <Compile Remove="ECommerceTests\ECommerceUI\ECommerceCheckOutCarrito\Screenshot\CheckOutCarrito\**" />
+    <EmbeddedResource Remove="EcommerceAPI\**" />
     <EmbeddedResource Remove="ECommerceBDD\**" />
     <EmbeddedResource Remove="ECommerceTests\ECommerceUI\ECommerceCheckOutCarrito\Screenshot\CheckOutCarrito\**" />
+    <None Remove="EcommerceAPI\**" />
     <None Remove="ECommerceBDD\**" />
     <None Remove="ECommerceTests\ECommerceUI\ECommerceCheckOutCarrito\Screenshot\CheckOutCarrito\**" />
+    <ReqnrollFeatureFiles Remove="EcommerceAPI\**" />
+    <ReqnrollObsoleteCodeBehindFiles Remove="EcommerceAPI\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,7 +48,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EcommerceAPI\" />
     <Folder Include="ECommerceTests\ECommerceUI\ECommerceCheckOutCarrito\Screenshot\CheckOut\" />
     <Folder Include="ECommerceTests\ECommerceUI\ECommerceLogin\Screenshot\LoginValido\" />
     <Folder Include="ECommerceTests\ECommerceUI\ECommerceLogin\Screenshot\LoginInvalido\" />
