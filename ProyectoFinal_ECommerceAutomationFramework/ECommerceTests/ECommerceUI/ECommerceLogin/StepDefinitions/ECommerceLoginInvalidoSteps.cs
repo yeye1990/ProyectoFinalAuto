@@ -33,14 +33,14 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
             string usuario = data.Arguments[0]!.ToString()!;
             string contrasena = data.Arguments[1]!.ToString()!;
             _eCommerceLoginPage.IngresarCredenciales(usuario, contrasena);
-            //Assert.Pass("Entered invalid credentials from test data.");
+            
         }
         [When(@"The user clicks the login button")]
         public void WhenTheUserClicksTheLoginButton()
         {
             _eCommerceLoginPage.EjecutarCapturaEvidenciaLoginInvalido(_driver);
             _eCommerceLoginPage.HacerClicBoton();
-            //Assert.Pass("Clicked the login button.");
+            Assert.Pass("Clicked the login button");
         }
         [Then(@"An error message ""Epic sadface: Username and password do not match any user in this service"" should be displayed")]
         public void ThenAnErrorMessageShouldBeDisplayed()

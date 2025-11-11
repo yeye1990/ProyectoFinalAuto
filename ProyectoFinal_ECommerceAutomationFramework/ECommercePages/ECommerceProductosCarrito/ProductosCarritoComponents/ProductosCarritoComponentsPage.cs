@@ -73,6 +73,12 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommercePro
         public IWebElement GetWebElementBtnRegresarPaginaPrincipal() => Btn_Regresar_Pagina_Principal;
 
 
+        // Definición de los localizadores By y WebElement
+        private By _removeButtons => By.CssSelector("button[data-test^='remove']");
+        public By GetByRemoveButtons() => _removeButtons;
+        private IWebElement Remove_Buttons => _driver.FindElement(_removeButtons);
+        public IWebElement GetWebElementRemoveButtons() => Remove_Buttons;
+
 
 
 

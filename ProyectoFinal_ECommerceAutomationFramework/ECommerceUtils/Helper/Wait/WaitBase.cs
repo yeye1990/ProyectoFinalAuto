@@ -20,6 +20,6 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Wait
         public untilTime Until<untilTime>(Func<IWebDriver, untilTime> condition)
         {
             return _wait.Until(condition);
-        }
+            }
     }
 }

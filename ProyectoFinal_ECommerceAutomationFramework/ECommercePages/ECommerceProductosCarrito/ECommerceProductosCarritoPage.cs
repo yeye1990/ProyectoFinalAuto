@@ -242,6 +242,20 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommercePro
             ScreenshotBase.TakeScreenshot(driver, fullPath);
         }
 
+        public int GetRemoveButtons()
+        {
+            
+            // Count items found
+            var cant_remove_bt = _driver.FindElements(_productosCarritoComponents.GetByRemoveButtons()).Count;
+
+            return cant_remove_bt;
+        }
+
+        public bool IsCartEmpty()
+        {
+            return GetRemoveButtons() == 0;
+        }
+
 
     }
 }
