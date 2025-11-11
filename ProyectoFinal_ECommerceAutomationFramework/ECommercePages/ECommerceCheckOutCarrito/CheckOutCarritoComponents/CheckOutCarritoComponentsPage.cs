@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceCheckOutCarrito.CheckOutCarritoComponents
 {
@@ -11,7 +6,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceChe
     {
         private readonly IWebDriver _driver;
         private int _indexProducto;
-        private string _nombreProducto;
+        private string ?_nombreProducto;
 
         public CheckOutCarritoComponentsPage(IWebDriver driver) {
             _driver = driver;

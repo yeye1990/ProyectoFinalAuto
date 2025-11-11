@@ -1,11 +1,6 @@
 ﻿using Moq;
 using ProyectoFinal_ECommerceAutomationFramework.ECommerceCore.Services.Interfaces;
 using ProyectoFinal_ECommerceAutomationFramework.ECommerceCore.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Driver
 {

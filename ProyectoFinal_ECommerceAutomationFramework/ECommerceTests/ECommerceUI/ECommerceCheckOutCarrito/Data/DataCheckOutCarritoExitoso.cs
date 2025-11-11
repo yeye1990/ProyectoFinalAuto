@@ -1,28 +1,21 @@
-﻿using OpenQA.Selenium;
-using ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceLogin.Data;
-using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.JsonReader;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.JsonReader;
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceCheckOutCarrito.Data
 {
     internal class DataCheckOutCarritoExitoso
     {
-        public string usuario { get; set; }
-        public string contrasena { get; set; }
-        public List<int> productosSeleccionados { get; set; }
-        public string nombreCliente { get; set; }
-        public string apellidoCliente { get; set; }
-        public string codigoPostal { get; set; }
-        public string assert_titulo_datos_cliente { get; set; }
-        public string assert_titulo_desglose_compra { get; set; }
-        public string assert_monto_total_productos { get; set; }
-        public string assert_monto_total_compra { get; set; }
-        public string assert_mensaje_compra_exitosa { get; set; }
-        public string evidencia { get; set; }
+        public string? usuario { get; set; }
+        public string? contrasena { get; set; }
+        public List<int>? productosSeleccionados { get; set; }
+        public string? nombreCliente { get; set; }
+        public string? apellidoCliente { get; set; }
+        public string? codigoPostal { get; set; }
+        public string? assert_titulo_datos_cliente { get; set; }
+        public string? assert_titulo_desglose_compra { get; set; }
+        public string? assert_monto_total_productos { get; set; }
+        public string? assert_monto_total_compra { get; set; }
+        public string? assert_mensaje_compra_exitosa { get; set; }
+        public string? evidencia { get; set; }
 
 
         /// <summary>

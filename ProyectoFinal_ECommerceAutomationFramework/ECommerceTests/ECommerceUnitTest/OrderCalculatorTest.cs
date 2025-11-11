@@ -1,8 +1,6 @@
 ﻿using ProyectoFinal_ECommerceAutomationFramework.ECommerceCore.Models;
-using ProyectoFinal_ECommerceAutomationFramework.ECommerceCore.Services.Interfaces;
 using ProyectoFinal_ECommerceAutomationFramework.ECommerceCore.Services;
 using Moq;
-using NUnit.Framework;
 using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Driver;
 
 

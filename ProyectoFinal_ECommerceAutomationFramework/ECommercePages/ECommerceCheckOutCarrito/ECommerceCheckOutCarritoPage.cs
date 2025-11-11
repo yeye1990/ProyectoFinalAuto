@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 using OpenQA.Selenium;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceCheckOutCarrito.CheckOutCarritoActios;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceCheckOutCarrito.CheckOutCarritoComponents;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceCheckOutCarrito.CheckOutCarritoWaits;
-using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin;
 using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Screenshot;
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceCheckOutCarrito

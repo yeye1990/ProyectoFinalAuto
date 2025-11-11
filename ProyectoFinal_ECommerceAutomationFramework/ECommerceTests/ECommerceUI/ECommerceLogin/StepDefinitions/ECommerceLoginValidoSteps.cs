@@ -2,6 +2,8 @@
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin;
 using Reqnroll;
 using ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceLogin.Data;
+using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Driver;
+using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Hook;
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceLogin.StepDefinitions
 {
@@ -39,8 +41,9 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         {
             var data = DataLoginValido.GetJsonDataLoginValido().First();
             string usuario = data.Arguments[0]!.ToString()!;
-            string contrasena = data.Arguments[1]!.ToString()!;
-            _loginPage.EjecutarCapturaEvidencia(_driver);
+            string contrasena = data.Arguments[1]!.ToString()!;            
+            //_loginPage.EjecutarCapturaEvidencia(_driver);
+            _loginPage.EjecutarCapturaEvidenciaSF();
             _loginPage.IngresarCredenciales(usuario,contrasena);
         }
 
@@ -50,7 +53,8 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         [When (@"The user Clicks the login button")]
         public void WhenTheUserClicksTheLoginButton()
         {
-            _loginPage.EjecutarCapturaEvidencia(_driver);
+            //_loginPage.EjecutarCapturaEvidencia(_driver);
+            _loginPage.EjecutarCapturaEvidenciaSF();
             _loginPage.HacerClicBoton();
         }
 
@@ -63,7 +67,8 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
             var data = DataLoginValido.GetJsonDataLoginValido().First();
             string assert_pass = data.Arguments[2]!.ToString()!;
             Assert.That(_loginPage.Assert_TituloConfirmacionIngreso(), Is.EqualTo(assert_pass));
-            _loginPage.EjecutarCapturaEvidencia(_driver);
+            //_loginPage.EjecutarCapturaEvidencia(_driver);
+            _loginPage.EjecutarCapturaEvidenciaSF();
         }
     }
 }

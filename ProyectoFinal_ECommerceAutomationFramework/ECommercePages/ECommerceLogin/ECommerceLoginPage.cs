@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin.LoginComponents;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin.LoginWaits;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin.LoginActions;
@@ -161,6 +156,30 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLog
 
             //Toma la captura
             ScreenshotBase.TakeScreenshot(driver, fullPath);
+        }
+
+        public void EjecutarCapturaEvidenciaSF()
+        {
+            _loginWaits.EsperaCapturaPantalla();
+
+            //Ruta base hasta LoginValido
+            string baseFolder = Path.GetFullPath(
+                Path.Combine(TestContext.CurrentContext.TestDirectory,
+                    @"..", @"..", @"..",
+                    "ECommerceTests", "ECommerceUI", "ECommerceLogin", "Screenshot", "LoginValido")
+            );
+
+            if (string.IsNullOrEmpty(_carpetaEvidenciaActual))
+            {
+                string folderName = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                _carpetaEvidenciaActual = Path.Combine(baseFolder, folderName);
+                Directory.CreateDirectory(_carpetaEvidenciaActual);
+            }
+
+            string nombreArchivo = $"Captura_{DateTime.Now:yyyyMMdd_HHmmss}.png";
+            string fullPath = Path.Combine(_carpetaEvidenciaActual, nombreArchivo);
+
+            ScreenshotBase.TakeScreenshot(_driver, fullPath); // <-- usa el driver interno
         }
 
     }

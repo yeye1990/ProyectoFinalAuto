@@ -1,11 +1,6 @@
 ﻿using OpenQA.Selenium;
 using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Wait;
 using SeleniumExtras.WaitHelpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceProductosCarrito.ProductosCarritoWaits
 {

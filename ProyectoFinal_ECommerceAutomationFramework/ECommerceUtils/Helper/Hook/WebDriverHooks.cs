@@ -1,10 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Reqnroll;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Edge;
@@ -15,7 +10,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Hook
     public class WebDriverHooks
     {
         private readonly ScenarioContext _scenarioContext;
-        protected IWebDriver Driver;
+        protected IWebDriver? Driver;
         private readonly string navegador = "firefox";
         private readonly string URL = "https://www.saucedemo.com/";
 
@@ -62,6 +57,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Hook
             // --- Configuración inicial ---
             Driver.Manage().Window.Maximize();
             Driver.Navigate().GoToUrl(URL);
+
         }
 
         [AfterScenario]

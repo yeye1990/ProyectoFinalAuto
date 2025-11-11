@@ -7,7 +7,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Drive
 {
     public class DriverBase
     {
-        protected IWebDriver Driver;
+        protected IWebDriver? Driver;
         private readonly string navegador = "firefox";
         private readonly string URL = "https://www.saucedemo.com/";
 

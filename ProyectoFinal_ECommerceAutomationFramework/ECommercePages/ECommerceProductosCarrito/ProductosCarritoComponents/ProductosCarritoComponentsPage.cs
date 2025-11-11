@@ -11,7 +11,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommercePro
     {
         private readonly IWebDriver _driver;
         private int _indexProducto;
-        private string _nombreProducto;
+        private string ?_nombreProducto;
 
         public ProductosCarritoComponentsPage(IWebDriver driver) {
             _driver = driver;

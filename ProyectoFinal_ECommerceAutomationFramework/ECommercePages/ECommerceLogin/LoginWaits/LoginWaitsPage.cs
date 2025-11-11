@@ -1,6 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Driver;
 using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.Wait;
 using SeleniumExtras.WaitHelpers;
 

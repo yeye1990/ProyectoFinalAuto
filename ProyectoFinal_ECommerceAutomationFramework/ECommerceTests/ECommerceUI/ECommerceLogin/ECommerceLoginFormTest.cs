@@ -15,16 +15,17 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         /// <param name="assert_pass">Texto esperado que confirma el ingreso exitoso (por ejemplo, el título de la página de productos).</param>
         /// <param name="assert_title_form_login">Título esperado del formulario de inicio de sesión.</param>
         [TestCaseSource(typeof(DataLoginValido), nameof(DataLoginValido.GetJsonDataLoginValido))]
+        [Ignore("Temporalmente deshabilitado para la evaluación de SpecFlow + Gherkin")]
         public void Test_LoginValido(string nombre, string contrasenna, string assert_pass, string assert_title_form_login) {
             //Arrange
-            var loginPage = new ECommerceLoginPage(Driver);
+            var loginPage = new ECommerceLoginPage(Driver!);
 
             //Act
             loginPage.Assert_TituloConfirmacionCargarPaginaWeb(assert_title_form_login);
             loginPage.IngresarCredenciales(nombre,contrasenna);
-            loginPage.EjecutarCapturaEvidencia(Driver);
+            loginPage.EjecutarCapturaEvidencia(Driver!);
             loginPage.HacerClicBoton();
-            loginPage.EjecutarCapturaEvidencia(Driver);
+            loginPage.EjecutarCapturaEvidencia(Driver!);
             
             //Assert
             Assert.That(loginPage.Assert_TituloConfirmacionIngreso(), Is.EqualTo(assert_pass));
@@ -40,16 +41,17 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         /// <param name="contrasenna">Contraseña incorrecta asociada al usuario.</param>
         /// <param name="assert_error_message">Mensaje de error esperado que debe mostrarse en pantalla.</param>
         [TestCaseSource(typeof(DataLoginInvalido), nameof(DataLoginInvalido.GetJsonDataLoginInvalido))]
+        [Ignore("Temporalmente deshabilitado para la evaluación de SpecFlow + Gherkin")]
         public void Test_LoginInvalido(string nombre, string contrasenna, string assert_error_message)
         {
             //Arrange
-            var loginPage = new ECommerceLoginPage(Driver);
+            var loginPage = new ECommerceLoginPage(Driver!);
             //Act
             loginPage.Assert_PaginaPrincipal();
             loginPage.IngresarCredenciales(nombre, contrasenna);
-            loginPage.EjecutarCapturaEvidencia(Driver);
+            loginPage.EjecutarCapturaEvidencia(Driver!);
             loginPage.HacerClicBoton();
-            loginPage.EjecutarCapturaEvidencia(Driver);
+            loginPage.EjecutarCapturaEvidencia(Driver!);
             string mensajeError = loginPage.Assert_MensajeErrorLogin();
 
             //Assert

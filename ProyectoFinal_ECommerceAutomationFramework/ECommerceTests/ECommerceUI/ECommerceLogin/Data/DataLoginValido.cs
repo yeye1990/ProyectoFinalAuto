@@ -1,18 +1,13 @@
 ﻿using ProyectoFinal_ECommerceAutomationFramework.ECommerceUtils.Helper.JsonReader;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceLogin.Data
 {
     internal class DataLoginValido
     {
-        public string usuario { get; set; }
-        public string contrasena { get; set; }
-        public string assert_pass { get; set; }
-        public string assert_title_form_login { get; set; }
+        public string? usuario { get; set; }
+        public string? contrasena { get; set; }
+        public string? assert_pass { get; set; }
+        public string? assert_title_form_login { get; set; }
 
         /// <summary>
         /// Obtiene los datos de prueba para el login válido desde un archivo JSON.

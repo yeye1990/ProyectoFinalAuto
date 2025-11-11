@@ -24,31 +24,32 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         /// <param name="p_assert_monto_total_compra">Monto total esperado de la compra (productos + impuestos).</param>
         /// <param name="p_assert_mensaje_compra_exitosa">Mensaje esperado tras completar exitosamente la compra.</param>
         [TestCaseSource(typeof(DataCheckOutCarritoExitoso), nameof(DataCheckOutCarritoExitoso.GetJsonDataCheckOut))]
+        [Ignore("Temporalmente deshabilitado para la evaluación de SpecFlow + Gherkin")]
         public void Test_CheckOutCarrito(string pusuario, string pcontrasenna, List<int> lproductos, string pnombre, string papellido, string pcodigoPostal, string p_assert_titulo_datos_cliente, string p_assert_titulo_desglose_compra, string p_assert_monto_total_productos, string p_assert_monto_total_compra, string p_assert_mensaje_compra_exitosa, string evidencia)
         {
             //Arrange
-            var loginpage = new ECommerceLoginPage(Driver);
-            var productosCarritoPage = new ECommerceProductosCarritoPage(Driver);
-            var checkOutCarritoPage = new ECommerceCheckOutCarritoPage(Driver);
+            var loginpage = new ECommerceLoginPage(Driver!);
+            var productosCarritoPage = new ECommerceProductosCarritoPage(Driver!);
+            var checkOutCarritoPage = new ECommerceCheckOutCarritoPage(Driver!);
             //Act
             loginpage.IngresarCredenciales(pusuario, pcontrasenna);
-            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver);
+            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver!);
             loginpage.HacerClicBoton();
-            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver);
+            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver!);
             productosCarritoPage.AgregarProductosCarrito(lproductos, evidencia);
             productosCarritoPage.HacerClicCarritoCompra();
-            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver);
+            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver!);
             checkOutCarritoPage.HacerClicBtnCheckout();
             string assert_titulo_datos_cliente = checkOutCarritoPage.Assert_TituloDatosClienteCheckOut();
             checkOutCarritoPage.IngresarDatosCliente(pnombre, papellido, pcodigoPostal);
-            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver);
+            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver!);
             checkOutCarritoPage.HacerClicBtnContinuar();
             string assert_titulo_desglose_compra = checkOutCarritoPage.Assert_TituloDesgloseCompraCheckOut();
             string assert_monto_total_productos = checkOutCarritoPage.Assert_VerificarTotalSumaProductos(productosCarritoPage.GetProductosSeleccionados());
             string assert_monto_total_compra = checkOutCarritoPage.Assert_VerificarMontoTotalCompra(productosCarritoPage.GetProductosSeleccionados());
-            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver);
+            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver!);
             checkOutCarritoPage.HacerClicBtnFinalizarCompra();
-            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver);
+            checkOutCarritoPage.EjecutarCapturaEvidencia(Driver!);
             string assert_mensaje_compra_exitosa = checkOutCarritoPage.Assert_MensajeConfirmacionCompraCheckOut();
 
 

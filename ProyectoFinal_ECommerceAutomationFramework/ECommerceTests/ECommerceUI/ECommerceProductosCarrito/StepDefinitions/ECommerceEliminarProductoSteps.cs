@@ -2,11 +2,6 @@
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceProductosCarrito;
 using Reqnroll;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceProductosCarrito.StepDefinitions
 {
@@ -36,7 +31,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
             string usuario = data.Arguments[0]!.ToString()!;
             string contrasena = data.Arguments[1]!.ToString()!;
             _loginPage.IngresarCredenciales(usuario, contrasena);
-            _productosCarritoPage.EjecutarCapturaEvidencia(_driver);
+            _productosCarritoPage.EjecutarCapturaEvidenciaEliminarProducto(_driver);
             _loginPage.HacerClicBoton();
         }
 
