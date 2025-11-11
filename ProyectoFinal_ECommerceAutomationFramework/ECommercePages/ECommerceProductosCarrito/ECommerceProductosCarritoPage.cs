@@ -34,7 +34,6 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommercePro
             foreach (var index in indicesProductos)
             {
                 _productosCarritoComponents.SetIndexProducto(index);
-                _productosCarritoActions.UsarMoveToElement(_productosCarritoComponents.GetWebElementLinkSeleccionarProducto());
                 string nombre = _productosCarritoComponents.GetWebElementLinkSeleccionarProducto().Text;
                 string precioTexto = _productosCarritoComponents.GetWebElementTxtPrecioProducto().Text;
                 _productosSeleccionados.Add((nombre, precioTexto));
