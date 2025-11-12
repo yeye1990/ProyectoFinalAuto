@@ -38,7 +38,8 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         [Given(@"The user has added products to the cart")]
         public void GivenTheUserHasAddedProductsToTheCart()
         {
-            _productosCarritoPage.AgregarProductosCarrito(new List<int> { 1, 2, 3 }, "Productos");
+            var data = ECommerceProductosCarrito.Data.DataAgregarProductosCarrito.GetJsonDataAgregarProductos().First();
+            _productosCarritoPage.AgregarProductosCarrito(data.Arguments[3], "Productos");
             _productosCarritoPage.EjecutarCapturaEvidenciaEliminarProducto(_driver);
         }
         [Given(@"The user clicks on the cart icon")]
