@@ -20,12 +20,18 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
     [global::NUnit.Framework.TestFixtureAttribute()]
     [global::NUnit.Framework.DescriptionAttribute("Product cart functionality")]
     [global::NUnit.Framework.FixtureLifeCycleAttribute(global::NUnit.Framework.LifeCycle.InstancePerTestCase)]
+    [global::NUnit.Framework.CategoryAttribute("allure.epic:ProductosCarrito")]
+    [global::NUnit.Framework.CategoryAttribute("allure.parentSuite:UI")]
+    [global::NUnit.Framework.CategoryAttribute("allure.suite:EliminarProductosCarrito")]
     public partial class ProductCartFunctionalityFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "allure.epic:ProductosCarrito",
+                "allure.parentSuite:UI",
+                "allure.suite:EliminarProductosCarrito"};
         
         private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "ECommerceTests/ECommerceUI/ECommerceProductosCarrito/Features", "Product cart functionality", null, global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
         
@@ -105,16 +111,16 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         
         public virtual async global::System.Threading.Tasks.Task FeatureBackgroundAsync()
         {
-#line 2
+#line 6
 #line hidden
-#line 3
- await testRunner.GivenAsync("The user logs into the system correctly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 7
+  await testRunner.GivenAsync("The user logs into the system correctly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 4
- await testRunner.AndAsync("The user has added products to the cart", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 8
+  await testRunner.AndAsync("The user has added products to the cart", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 5
- await testRunner.AndAsync("The user clicks on the cart icon", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 9
+  await testRunner.AndAsync("The user clicks on the cart icon", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
         }
         
@@ -126,16 +132,20 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Remove a product from the cart")]
+        [global::NUnit.Framework.CategoryAttribute("critical")]
+        [global::NUnit.Framework.CategoryAttribute("allure.story:EliminarProductoCarrito")]
         public async global::System.Threading.Tasks.Task RemoveAProductFromTheCart()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "critical",
+                    "allure.story:EliminarProductoCarrito"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "0";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Remove a product from the cart", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 6
-  this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line 13
+this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -144,14 +154,14 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
             else
             {
                 await this.ScenarioStartAsync();
-#line 2
+#line 6
 await this.FeatureBackgroundAsync();
 #line hidden
-#line 7
- await testRunner.WhenAsync("The user removes a product from the cart", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line 14
+  await testRunner.WhenAsync("The user removes a product from the cart", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 8
- await testRunner.ThenAsync("The user verifies that the selected products have been removed from the cart", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line 15
+  await testRunner.ThenAsync("The user verifies that the selected products have been removed from the cart", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

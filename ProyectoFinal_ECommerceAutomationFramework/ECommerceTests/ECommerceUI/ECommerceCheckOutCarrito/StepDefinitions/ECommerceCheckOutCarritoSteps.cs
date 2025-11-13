@@ -57,7 +57,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         /// Este paso se utiliza para preparar el flujo de compra, asegurando que los productos requeridos
         /// estén disponibles en el carrito antes de continuar hacia el proceso de checkout.
         /// </remarks>
-        [Then (@"The user adds products to the cart in order to make a purchase")]
+        [Given (@"The user adds products to the cart in order to make a purchase")]
         public void ThenTheUserAddsProductsToTheCartInOrderToMakeAPurchase()
         {
             var data = DataCheckOutCarritoExitoso.GetJsonDataCheckOut().First();

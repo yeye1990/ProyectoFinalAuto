@@ -20,12 +20,18 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
     [global::NUnit.Framework.TestFixtureAttribute()]
     [global::NUnit.Framework.DescriptionAttribute("Validate the Checkout process of the shopping cart in the E-Commerce application")]
     [global::NUnit.Framework.FixtureLifeCycleAttribute(global::NUnit.Framework.LifeCycle.InstancePerTestCase)]
+    [global::NUnit.Framework.CategoryAttribute("allure.epic:CheckoutCarrito")]
+    [global::NUnit.Framework.CategoryAttribute("allure.parentSuite:UI")]
+    [global::NUnit.Framework.CategoryAttribute("allure.suite:CheckoutCarrito")]
     public partial class ValidateTheCheckoutProcessOfTheShoppingCartInTheE_CommerceApplicationFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "allure.epic:CheckoutCarrito",
+                "allure.parentSuite:UI",
+                "allure.suite:CheckoutCarrito"};
         
         private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "ECommerceTests/ECommerceUI/ECommerceCheckOutCarrito/Features", "Validate the Checkout process of the shopping cart in the E-Commerce application", null, global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
         
@@ -105,13 +111,13 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         
         public virtual async global::System.Threading.Tasks.Task FeatureBackgroundAsync()
         {
-#line 3
+#line 6
 #line hidden
-#line 4
+#line 7
   await testRunner.GivenAsync("The user logs into the system with valid credential", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 5
-  await testRunner.ThenAsync("The user adds products to the cart in order to make a purchase", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line 8
+  await testRunner.AndAsync("The user adds products to the cart in order to make a purchase", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
         }
         
@@ -123,15 +129,19 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Successfully completing the shopping cart checkout")]
+        [global::NUnit.Framework.CategoryAttribute("critical")]
+        [global::NUnit.Framework.CategoryAttribute("allure.story:CheckoutCompleto")]
         public async global::System.Threading.Tasks.Task SuccessfullyCompletingTheShoppingCartCheckout()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "critical",
+                    "allure.story:CheckoutCompleto"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "0";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Successfully completing the shopping cart checkout", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 7
+#line 12
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -141,34 +151,34 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 3
+#line 6
 await this.FeatureBackgroundAsync();
 #line hidden
-#line 8
+#line 13
   await testRunner.GivenAsync("The user has selected the products and clicks the \"Checkout\" button", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 9
+#line 14
   await testRunner.ThenAsync("The user should see the screen with the title \"Checkout: Your Information\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 10
+#line 15
   await testRunner.WhenAsync("The user enters their required personal information for the checkout", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 11
+#line 16
   await testRunner.AndAsync("The user clicks the \"Continue\" button", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 17
   await testRunner.ThenAsync("The user should see the screen with the title \"Checkout: Overview\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 13
+#line 18
   await testRunner.AndAsync("The user should verify the total sum of the products", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 14
+#line 19
   await testRunner.AndAsync("The user should verify the total amount including tax", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 20
   await testRunner.WhenAsync("The user clicks the \"Finish\" button", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 16
+#line 21
   await testRunner.ThenAsync("The user should see the screen with the message \"Thank you for your order!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }

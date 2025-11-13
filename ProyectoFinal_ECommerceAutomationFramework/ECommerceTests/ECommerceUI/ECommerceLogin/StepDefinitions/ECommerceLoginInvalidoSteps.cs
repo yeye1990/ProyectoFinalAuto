@@ -41,7 +41,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         {
             _eCommerceLoginPage.HacerClicBoton();
             _eCommerceLoginPage.EjecutarCapturaEvidenciaLoginInvalido(_driver);
-            Assert.Pass("Clicked the login button");
+            
         }
         [Then(@"An error message ""Epic sadface: Username and password do not match any user in this service"" should be displayed")]
         public void ThenAnErrorMessageShouldBeDisplayed()

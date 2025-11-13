@@ -20,12 +20,18 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
     [global::NUnit.Framework.TestFixtureAttribute()]
     [global::NUnit.Framework.DescriptionAttribute("Login")]
     [global::NUnit.Framework.FixtureLifeCycleAttribute(global::NUnit.Framework.LifeCycle.InstancePerTestCase)]
+    [global::NUnit.Framework.CategoryAttribute("allure.epic:Login")]
+    [global::NUnit.Framework.CategoryAttribute("allure.parentSuite:UI")]
+    [global::NUnit.Framework.CategoryAttribute("allure.suite:LoginInvalido")]
     public partial class LoginFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "allure.epic:Login",
+                "allure.parentSuite:UI",
+                "allure.suite:LoginInvalido"};
         
         private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "ECommerceTests/ECommerceUI/ECommerceLogin/Features", "Login", null, global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
         
@@ -110,16 +116,20 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Unsuccessful login with invalid credentials")]
+        [global::NUnit.Framework.CategoryAttribute("critical")]
+        [global::NUnit.Framework.CategoryAttribute("allure.story:LoginInvalido")]
         public async global::System.Threading.Tasks.Task UnsuccessfulLoginWithInvalidCredentials()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "critical",
+                    "allure.story:LoginInvalido"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "0";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Unsuccessful login with invalid credentials", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 3
-  this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line 8
+this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -128,17 +138,17 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
             else
             {
                 await this.ScenarioStartAsync();
-#line 4
+#line 9
   await testRunner.GivenAsync("The user is on the login page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 5
- await testRunner.WhenAsync("The user enters invalid username and password from testdata \"InvalidCredentials\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line 10
+  await testRunner.WhenAsync("The user enters invalid username and password from testdata \"InvalidCredentials\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 6
- await testRunner.AndAsync("The user clicks the login button", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 11
+  await testRunner.AndAsync("The user clicks the login button", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 7
- await testRunner.ThenAsync("An error message \"Epic sadface: Username and password do not match any user in th" +
+#line 12
+  await testRunner.ThenAsync("An error message \"Epic sadface: Username and password do not match any user in th" +
                         "is service\" should be displayed", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }

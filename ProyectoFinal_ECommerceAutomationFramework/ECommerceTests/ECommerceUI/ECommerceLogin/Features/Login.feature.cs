@@ -20,12 +20,18 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
     [global::NUnit.Framework.TestFixtureAttribute()]
     [global::NUnit.Framework.DescriptionAttribute("Validate login scenario in the E-Commerce application")]
     [global::NUnit.Framework.FixtureLifeCycleAttribute(global::NUnit.Framework.LifeCycle.InstancePerTestCase)]
+    [global::NUnit.Framework.CategoryAttribute("allure.epic:Login")]
+    [global::NUnit.Framework.CategoryAttribute("allure.parentSuite:UI")]
+    [global::NUnit.Framework.CategoryAttribute("allure.suite:Login")]
     public partial class ValidateLoginScenarioInTheE_CommerceApplicationFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "allure.epic:Login",
+                "allure.parentSuite:UI",
+                "allure.suite:Login"};
         
         private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "ECommerceTests/ECommerceUI/ECommerceLogin/Features", "Validate login scenario in the E-Commerce application", null, global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
         
@@ -110,15 +116,19 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Login to the application with valid credentials")]
+        [global::NUnit.Framework.CategoryAttribute("critical")]
+        [global::NUnit.Framework.CategoryAttribute("allure.story:LoginValido")]
         public async global::System.Threading.Tasks.Task LoginToTheApplicationWithValidCredentials()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "critical",
+                    "allure.story:LoginValido"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "0";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Login to the application with valid credentials", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 3
+#line 8
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -128,17 +138,17 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 4
-   await testRunner.GivenAsync("That when the page loads the user should see the title \"Swag Labs\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 9
+  await testRunner.GivenAsync("That when the page loads the user should see the title \"Swag Labs\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 5
-   await testRunner.WhenAsync("The user enters valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line 10
+  await testRunner.WhenAsync("The user enters valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 6
-   await testRunner.AndAsync("The user Clicks the login button", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 11
+  await testRunner.AndAsync("The user clicks the login button", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 7
-   await testRunner.ThenAsync("The user should see the products page with the title \"Products\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line 12
+  await testRunner.ThenAsync("The user should see the products page with the title \"Products\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
