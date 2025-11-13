@@ -27,15 +27,13 @@ ProyectoFinal_ECommerceAutomationFramework/
 ├── ECommercePages/ # Capa que implementa el patrón Page Object Model
 │ ├── ECommerceLogin/ # Páginas, acciones y waits para el login
 │ ├── ECommerceProductosCarrito/ # Páginas, acciones y waits del carrito
-│ ├── ECommerceCheckOutCarrito/ # Páginas, acciones y waits del checkout
-│ └── ECommerceReport/ # Generación y manejo de reportes
+│ └── ECommerceCheckOutCarrito/ # Páginas, acciones y waits del checkout
 │
 ├── ECommerceUtils/ # Capa de utilidades y soporte
 │ └── Helper/
 │ ├── Driver/ # Inicialización y control del WebDriver
 │ ├── Hook/ # Configuración de hooks globales
-│ ├── JsonReader/ # Lectura de datos desde archivos JSON
-│ ├── Report/ # Generación de reportes HTML
+│ ├── JsonReader/ # Lectura de datos desde archivos JSON 
 │ ├── Screenshot/ # Captura de evidencias visuales
 │ └── Wait/ # Métodos de espera explícita e implícita
 │
@@ -43,11 +41,11 @@ ProyectoFinal_ECommerceAutomationFramework/
 │ ├── ECommerceUI/ # Pruebas funcionales y de aceptación
 │ │ ├── ECommerceLogin/ # Escenarios BDD para login
 │ │ ├── ECommerceProductosCarrito/ # Escenarios BDD para agregar/eliminar productos
-│ │ ├── ECommerceCheckOutCarrito/ # Escenarios BDD para checkout
-│ │ └── Reports/ # Evidencias y reportes de ejecución
+│ │ └── ECommerceCheckOutCarrito/ # Escenarios BDD para checkout
+│ │ 
 │ └── ECommerceUnitTest/ # (Opcional) Pruebas unitarias aisladas
 │
-├── appsettings.json # Archivo de configuración general
+├── allureconfig.json
 └── ProyectoFinal_ECommerceAutomationFramework.sln # Solución principal
 
 ### Componentes clave
@@ -56,7 +54,7 @@ ProyectoFinal_ECommerceAutomationFramework/
 - **Steps:** conectan los pasos definidos en los archivos `.feature` con las acciones del framework.  
 - **Features:** describen los escenarios BDD en lenguaje natural (Gherkin).  
 - **Data:** provee datos de entrada en formato JSON para escenarios parametrizados.  
-- **Reports:** generan y almacenan reportes HTML con capturas de pantalla.  
+- **Reports:** Allure.  
 - **Hooks:** controlan la inicialización y finalización del navegador y de los escenarios.
 
 ## Instalación
@@ -65,7 +63,8 @@ Para clonar y ejecutar el proyecto, utilice los siguientes comandos:
 
 ```bash
 git clone https://github.com/yeye1990/ProyectoFinalAuto
-cd ProyectoFinalAuto
+cd ProyectoFinal_ECommerceAutomationFramework
 dotnet restore
 dotnet build
-dotnet test
+dotnet test 
+allure serve .\bin\Debug\net9.0\allure-results
