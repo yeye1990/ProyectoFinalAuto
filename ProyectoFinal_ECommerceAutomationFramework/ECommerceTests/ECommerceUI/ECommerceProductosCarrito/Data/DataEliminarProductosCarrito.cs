@@ -12,6 +12,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         public string? usuario { get; set; }
         public string? contrasena { get; set; }
         public List<int>? productosSeleccionados { get; set; }
+        public string? evidencia { get; set; }
 
         /// <summary>
         /// Obtiene los datos de prueba para agregar productos al carrito desde un archivo JSON.
@@ -34,7 +35,7 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
 
             foreach (var item in data)
             {
-                yield return new TestCaseData(item.usuario, item.contrasena, item.productosSeleccionados);
+                yield return new TestCaseData(item.usuario, item.contrasena, item.productosSeleccionados, item.evidencia);
             }
         }
     }
