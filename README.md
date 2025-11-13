@@ -13,7 +13,51 @@ Este proyecto se basa en el sistema **SauceDemo**, un sitio de e-commerce fictic
 El propósito del proyecto es demostrar la aplicación de buenas prácticas de automatización, patrones de diseño, Page Object Model, integración con Selenium WebDriver y ejecución de pruebas en un entorno estructurado.
 
 ## Arquitectura del Framework
-Aquí explicamos la arquitectura
+El framework de automatización está desarrollado en **.NET 9** con **Selenium WebDriver**, **NUnit** y **SpecFlow**, siguiendo una arquitectura modular basada en el **patrón Page Object Model (POM)**.  
+Esta estructura facilita la mantenibilidad, escalabilidad y reutilización del código, separando claramente las responsabilidades entre lógica de negocio, interfaz, utilidades y pruebas.
+
+### Estructura general del proyecto
+
+ProyectoFinal_ECommerceAutomationFramework/
+├── ECommerceCore/ # Capa de lógica base y modelos de negocio
+│ ├── Models/ # Clases que representan estructuras de datos
+│ └── Services/ # Servicios generales e interfaces reutilizables
+│ └── Interfaces/
+│
+├── ECommercePages/ # Capa que implementa el patrón Page Object Model
+│ ├── ECommerceLogin/ # Páginas, acciones y waits para el login
+│ ├── ECommerceProductosCarrito/ # Páginas, acciones y waits del carrito
+│ ├── ECommerceCheckOutCarrito/ # Páginas, acciones y waits del checkout
+│ └── ECommerceReport/ # Generación y manejo de reportes
+│
+├── ECommerceUtils/ # Capa de utilidades y soporte
+│ └── Helper/
+│ ├── Driver/ # Inicialización y control del WebDriver
+│ ├── Hook/ # Configuración de hooks globales
+│ ├── JsonReader/ # Lectura de datos desde archivos JSON
+│ ├── Report/ # Generación de reportes HTML
+│ ├── Screenshot/ # Captura de evidencias visuales
+│ └── Wait/ # Métodos de espera explícita e implícita
+│
+├── ECommerceTests/ # Capa de pruebas automatizadas
+│ ├── ECommerceUI/ # Pruebas funcionales y de aceptación
+│ │ ├── ECommerceLogin/ # Escenarios BDD para login
+│ │ ├── ECommerceProductosCarrito/ # Escenarios BDD para agregar/eliminar productos
+│ │ ├── ECommerceCheckOutCarrito/ # Escenarios BDD para checkout
+│ │ └── Reports/ # Evidencias y reportes de ejecución
+│ └── ECommerceUnitTest/ # (Opcional) Pruebas unitarias aisladas
+│
+├── appsettings.json # Archivo de configuración general
+└── ProyectoFinal_ECommerceAutomationFramework.sln # Solución principal
+
+### Componentes clave
+
+- **Page Objects:** encapsulan los elementos y acciones de cada página web.  
+- **Steps:** conectan los pasos definidos en los archivos `.feature` con las acciones del framework.  
+- **Features:** describen los escenarios BDD en lenguaje natural (Gherkin).  
+- **Data:** provee datos de entrada en formato JSON para escenarios parametrizados.  
+- **Reports:** generan y almacenan reportes HTML con capturas de pantalla.  
+- **Hooks:** controlan la inicialización y finalización del navegador y de los escenarios.
 
 ## Instalación
 Para clonar y ejecutar el proyecto, utilice los siguientes comandos:
@@ -21,7 +65,7 @@ Para clonar y ejecutar el proyecto, utilice los siguientes comandos:
 
 ```bash
 git clone https://github.com/yeye1990/ProyectoFinalAuto
-cd SE DEBE COMPLETAR
+cd ProyectoFinalAuto
 dotnet restore
 dotnet build
 dotnet test

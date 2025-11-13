@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceLogin;
 using ProyectoFinal_ECommerceAutomationFramework.ECommercePages.ECommerceProductosCarrito;
+using ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceLogin.Data;
+using ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceProductosCarrito.Data;
 using Reqnroll;
 
 namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.ECommerceProductosCarrito.StepDefinitions
@@ -38,8 +40,10 @@ namespace ProyectoFinal_ECommerceAutomationFramework.ECommerceTests.ECommerceUI.
         [Given(@"The user has added products to the cart")]
         public void GivenTheUserHasAddedProductsToTheCart()
         {
-            var data = ECommerceProductosCarrito.Data.DataAgregarProductosCarrito.GetJsonDataAgregarProductos().First();
-            _productosCarritoPage.AgregarProductosCarrito(data.Arguments[3], "Productos");
+            var data = DataAgregarProductosCarrito.GetJsonDataAgregarProductos().First();
+            List<int> lproductos = (List<int>)data.Arguments[2]!;
+            string evidencia = data.Arguments[3]!.ToString()!;
+            _productosCarritoPage.AgregarProductosCarrito(lproductos, evidencia);
             _productosCarritoPage.EjecutarCapturaEvidenciaEliminarProducto(_driver);
         }
         [Given(@"The user clicks on the cart icon")]
