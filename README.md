@@ -19,8 +19,8 @@ Esta estructura facilita la mantenibilidad, escalabilidad y reutilización del c
 ### Estructura general del proyecto
 
 ProyectoFinal_ECommerceAutomationFramework/
-├── ECommerceCore/ # Capa de lógica base y modelos de negocio
 
+├── ECommerceCore/ # Capa de lógica base y modelos de negocio
 │ ├── Models/ # Clases que representan estructuras de datos
 │ └── Services/ # Servicios generales e interfaces reutilizables
 │ └── Interfaces/
