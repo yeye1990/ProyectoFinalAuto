@@ -20,7 +20,7 @@ Esta estructura facilita la mantenibilidad, escalabilidad y reutilización del c
 
 ProyectoFinal_ECommerceAutomationFramework/
 - ECommerceCore/ # Capa de lógica base y modelos de negocio
--- Models/ # Clases que representan estructuras de datos
+- - Models/ # Clases que representan estructuras de datos
 o	Services/ # Servicios generales e interfaces reutilizables
 o	Interfaces/
 •	ECommercePages/ # Capa que implementa el patrón Page Object Model
