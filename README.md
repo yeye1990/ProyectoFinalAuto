@@ -53,6 +53,32 @@ ProyectoFinal_ECommerceAutomationFramework.sln # Solución principal
 - **Reports:** Allure.  
 - **Hooks:** controlan la inicialización y finalización del navegador y de los escenarios.
 
+## Precondiciones
+
+### 1. Instalación de Scoop (requisito para Allure en Windows)
+
+En PowerShell como administrador:
+
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser\
+irm get.scoop.sh \| iex
+
+Verificar instalación:\
+scoop --version
+
+### 2. Instalación de Java (requerido por Allure)
+
+scoop install openjdk
+
+Verificar instalación:\
+java -version
+
+### 3. Instalación de Allure Commandline
+
+scoop install allure
+
+Verificar instalación:\
+allure --version
+
 ## Instalación
 Para clonar y ejecutar el proyecto, utilice los siguientes comandos:
 
