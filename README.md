@@ -19,34 +19,30 @@ Esta estructura facilita la mantenibilidad, escalabilidad y reutilización del c
 ### Estructura general del proyecto
 
 ProyectoFinal_ECommerceAutomationFramework/
-ECommerceCore/ # Capa de lógica base y modelos de negocio
- -Models/ # Clases que representan estructuras de datos
- -Services/ # Servicios generales e interfaces reutilizables
- -Interfaces/
+•	ECommerceCore/ # Capa de lógica base y modelos de negocio
+o	Models/ # Clases que representan estructuras de datos
+o	Services/ # Servicios generales e interfaces reutilizables
+o	Interfaces/
+•	ECommercePages/ # Capa que implementa el patrón Page Object Model
+o	ECommerceLogin/ # Páginas, acciones y waits para el login
+o	ECommerceProductosCarrito/ # Páginas, acciones y waits del carrito
+o	ECommerceCheckOutCarrito/ # Páginas, acciones y waits del checkout
+•	ECommerceUtils/ # Capa de utilidades y soporte
+o	Helper/
+	Driver/ # Inicialización y control del WebDriver
+	Hook/ # Configuración de hooks globales
+	JsonReader/ # Lectura de datos desde archivos JSON 
+	Screenshot/ # Captura de evidencias visuales
+	Wait/ # Métodos de espera explícita e implícita
+•	ECommerceTests/ # Capa de pruebas automatizadas
+•	ECommerceUI/ # Pruebas funcionales y de aceptación
+o	ECommerceLogin/ # Escenarios BDD para login
+o	ECommerceProductosCarrito/ # Escenarios BDD para agregar/eliminar productos
+o	ECommerceCheckOutCarrito/ # Escenarios BDD para checkout
+•	ECommerceUnitTest/ # (Opcional) Pruebas unitarias aisladas
+•	allureconfig.json
+ProyectoFinal_ECommerceAutomationFramework.sln # Solución principal
 
-├── ECommercePages/ # Capa que implementa el patrón Page Object Model
-│ ├── ECommerceLogin/ # Páginas, acciones y waits para el login
-│ ├── ECommerceProductosCarrito/ # Páginas, acciones y waits del carrito
-│ └── ECommerceCheckOutCarrito/ # Páginas, acciones y waits del checkout
-│
-├── ECommerceUtils/ # Capa de utilidades y soporte
-│ └── Helper/
-│ ├── Driver/ # Inicialización y control del WebDriver
-│ ├── Hook/ # Configuración de hooks globales
-│ ├── JsonReader/ # Lectura de datos desde archivos JSON 
-│ ├── Screenshot/ # Captura de evidencias visuales
-│ └── Wait/ # Métodos de espera explícita e implícita
-│
-├── ECommerceTests/ # Capa de pruebas automatizadas
-│ ├── ECommerceUI/ # Pruebas funcionales y de aceptación
-│ │ ├── ECommerceLogin/ # Escenarios BDD para login
-│ │ ├── ECommerceProductosCarrito/ # Escenarios BDD para agregar/eliminar productos
-│ │ └── ECommerceCheckOutCarrito/ # Escenarios BDD para checkout
-│ │ 
-│ └── ECommerceUnitTest/ # (Opcional) Pruebas unitarias aisladas
-│
-├── allureconfig.json
-└── ProyectoFinal_ECommerceAutomationFramework.sln # Solución principal
 
 ### Componentes clave
 
